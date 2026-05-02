@@ -1,65 +1,17 @@
-# Deshi Product Backend
+# frontend
 
-This backend uses Django REST Framework with SQLite and is structured for both local development and production-style deployment.
+A new Flutter project.
 
-## Run
+## Getting Started
 
-```bash
-python manage.py migrate
-python manage.py seed_store
-python manage.py runserver
-```
+This project is a starting point for a Flutter application.
 
-Windows shortcut scripts:
+A few resources to get you started if this is your first Flutter project:
 
-```powershell
-cd backend
-.\runserver.ps1
-```
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
 
-```bat
-cd backend
-runserver.bat
-```
-
-Environment variables:
-
-```bash
-DJANGO_SETTINGS_MODULE=config.settings.dev
-DJANGO_DEBUG=true
-DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost
-DJANGO_CORS_ALLOW_ALL=true
-```
-
-Production-style run:
-
-```bash
-set DJANGO_SETTINGS_MODULE=config.settings.prod
-python manage.py collectstatic --noinput
-gunicorn config.wsgi:application --bind 0.0.0.0:8000
-```
-
-Docker run:
-
-```bash
-docker compose up --build
-```
-
-## API
-
-Primary professional API version:
-
-- `GET /api/v1/health/`
-- `GET /api/v1/categories/`
-- `GET /api/v1/products/`
-- `GET /api/v1/storefront/`
-
-Backward-compatible aliases are also available under `/api/`.
-
-- `GET /api/health/`
-- `GET /api/categories/`
-- `GET /api/products/`
-- `GET /api/storefront/`
-- `GET /api/products/?featured=true`
-- `GET /api/products/?category=vegetables`
-- `GET /api/products/?q=tomato`
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
